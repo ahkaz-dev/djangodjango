@@ -7,6 +7,8 @@ urlpatterns = [
     # home path
     path('', include('catalog.urls')),
     path('books/', views.book, name='home.html'),
+    path('authors/', views.authors, name='authors.html'),
+
 
     path('contacts/', include('contacts.urls')),
 
