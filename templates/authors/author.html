@@ -18,10 +18,9 @@
         <table class="table">
           <thead class="thead-inverse">
             <tr>
-              <th>Фамилия автора</th>
-              <th>Описание</th>
-              <th>Автор</th>
-              <th>Дата издания</th>
+              <th>Фамилия</th>
+              <th>Имя</th>
+              <th>Отчество</th>
             </tr>
           </thead>
           <tbody>
@@ -31,10 +30,10 @@
                   {{ author.surname }}
                 </td>
                 <td class="align-middle">
-                    {{ book.desc }}
+                    {{ author.name }}
                 </td>
                 <td class="align-middle">
-                    {{ book.author }}
+                    {{ author.lastname }}
                 </td>
                 <td>
                     {{ book.year }}
