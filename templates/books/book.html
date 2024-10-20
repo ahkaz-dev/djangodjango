@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книги</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <ol class="breadcrumb my-4">
+          <li class="breadcrumb-item active">Boards</li>
+        </ol>
+        <table class="table">
+          <thead class="thead-inverse">
+            <tr>
+              <th>Board</th>
+              <th>Posts</th>
+              <th>Topics</th>
+              <th>Last Post</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for book in books %}
+              <tr>
+                <td>
+                  {{ book.title }}
+                </td>
+                <td class="align-middle">
+                    {{ book.desc }}
+                </td>
+                <td class="align-middle">
+                    {{ book.author }}
+                </td>
+                <td>
+                    {{ book.year }}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+</body>
+</html>
